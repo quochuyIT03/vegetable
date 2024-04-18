@@ -1,0 +1,33 @@
+$DesktopUI: "DesktopUI"; 
+$Medium_DeviceUI: "Medium_DeviceUI"; 
+$TabletUI: "TabletUI"; 
+$MobileUI: "MobileUI"; 
+$Small_MobileUI: "Small_MobileUI"; 
+
+@mixin Responsive($canvas){
+    @if$canvas == $DesktopUI{
+        @media only screen and (min-width:1200px) {
+            @content;
+        }
+    }
+    @else if $canvas == $Medium_DeviceUI{
+        @media only screen and (min-width:992px) and (max-width:1199px){
+            @content;
+        }
+    }
+    @else if $canvas == $TabletUI{
+        @media only screen and (min-width:768px) and (max-width:991px){
+            @content;
+        }
+    }
+    @else if $canvas == $MobileUI{
+        @media only screen and (max-width:767px){
+            @content;
+        }
+    }   
+    @else if $canvas == $Small_MobileUI{
+        @media only screen and (max-width:575px){
+            @content;
+        }
+    }
+}

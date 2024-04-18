@@ -1,0 +1,51 @@
+@use "sass:map";
+@import "style/pages/all";
+
+
+.card-about_{
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    
+   
+}
+.about-card-image:hover{
+    transform: scale(1.1);
+}
+.about-card{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    width: 250px;
+    height: 370px;
+    box-sizing: border-box;
+    max-width: 1150px;
+    overflow: hidden;
+    transition: transform 0.3s;
+    cursor: pointer;
+
+    .about-card-image {
+        flex: 0.6; 
+        width: 100%;
+        object-fit: cover;
+        transition: transform 0.5s;
+        background-size: cover;
+        
+    }
+    .about-card-content {
+        flex: 0.4; 
+        background: #d8d8d8;
+        color: #000;
+        padding: 10px; 
+        box-sizing: border-box; 
+        padding-top: 50px;
+        transition: background-color 0.5s;
+    }
+    
+    
+}
+.about-card:hover .about-card-content {
+    color: white;
+    background-color: rgb(6, 75, 47); /* Thay đổi màu nền khi hover vào card */
+}

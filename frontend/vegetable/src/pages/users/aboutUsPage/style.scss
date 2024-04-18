@@ -1,0 +1,275 @@
+@use "sass:map";
+@import "style/pages/theme";
+
+
+.about-thumb{
+    .container_img {
+        display: flex;
+        justify-content: space-between;
+        align-items: center; 
+        max-width: 1150px;
+        margin: 0 auto;
+        
+      }
+      
+      .column {
+
+        flex: 1;    
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start; 
+        justify-content: center;
+        margin-top: 100px;
+        padding-bottom: 100px;
+        z-index: 20;
+        margin-left: 2em;
+        padding-bottom: 1em; 
+        margin-left: 5%;
+
+        p {
+            text-align: justify; 
+            padding-top: 20px;
+          }
+        img {
+          
+            width: 550px; 
+            height: 500px;
+            
+          }
+
+       .column_{
+        position: relative;
+        padding-bottom: 20px;
+
+       }
+
+        
+    }
+
+        h1{
+            padding-bottom: 40px;
+            color: map.get($theme-color, "main_color");
+            
+        }
+        h2{
+            padding-bottom: 40px;
+        }
+}
+
+
+    // img{
+    //     height: auto;
+    //     max-width: 100%;
+    //     border: none;
+    //     border-radius: 0;
+    //     box-shadow: none;
+  
+    // }
+    // position: relative;
+    // img{
+         
+    //     top: 0; 
+    //     left: 0; 
+    //     position: absolute;
+     
+    // }
+    // .huy{
+    //     top: 500px;
+    //     left: -50px;
+        
+    // }
+.row_with_svg{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: 50px;
+   
+    svg{
+        width: 50px;
+        height: 50px;
+        background: rgb(172, 169, 169);
+        border-radius: 50%;
+        opacity: 0.8;
+        color: rgb(10, 142, 10);
+        transition: all, 0.5s;
+        
+    }
+   
+        svg:hover{
+            background: rgb(10, 142, 10);
+            border-color:rgb(10, 142, 10);
+            color:white;
+            transform: rotate(360deg) ;
+        }
+        
+    
+}
+
+.btn-more{
+    background-color: #4CAF50; 
+    border: none; 
+    color: white; 
+    padding: 10px 20px; 
+    text-align: center;
+    text-decoration: none; 
+    display: inline-block; 
+    font-size: 16px; 
+    cursor: pointer; 
+    transition: background-color 0.3s;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    transition: all 0.5s;
+}
+.btn-more:hover{
+    background-color: #08245e; 
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2); 
+    transition: all 0.5s;
+    color: rgb(255, 255, 255);
+}
+.container_stat{
+    
+    height: 480px;
+    width: 1020;
+    margin-bottom: 20px;
+    background-image: url(https://shtheme.org/demosd/fudee/wp-content/uploads/2020/05/counter-bg.png);
+    display: flex;
+    
+}
+
+.circle .card{
+    position: relative;
+    width: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+    border-radius: 4px;
+    text-align: center;
+    overflow: hidden;
+    transition: 0.5s;
+    gap: 20px;
+
+    
+}
+.circle{
+    display: flex;
+    margin: 0 auto;
+    align-items: center;
+}
+.circle .card:hover{
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgb(136, 99, 99);
+}
+
+.circle .card::before{
+    content: " ";
+    position: absolute;
+    top: 0;
+    left: -50%;
+    width: 100%;
+    height: 100%;
+    background: rgb(255, 255, 255);
+    pointer-events: none;
+    z-index: 1;
+}
+
+.par{
+    position: relative;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    box-shadow: 0 0 50px rgb(130, 122, 122);
+    background: none;
+    z-index: 1000;
+}
+.par .num{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    border-radius: 50%;
+    align-items: center;
+}
+.par .num h2{
+    color: #000000;
+    font-weight: 700;
+    transition: 0.5s;
+}
+.card:hover .par .num h2{
+    color: #777;
+    font-size: 60px;
+}
+.par .num h2 span{
+    font-size: 24px;
+    color: #000000;
+    
+}
+.card:hover .par .num h2 span{
+    color:#777;
+}
+.text{
+    position: relative;
+    color:#000000;
+    margin-top: 20px;
+    font-weight: 700;
+    font-size: 18px;
+    letter-spacing: 1px;
+    transition: 0.5s;
+    z-index: 10000;
+}
+
+.card:hover .text{
+    color: #000000;
+    svg{
+        position: relative;
+        width: 150px;
+        height: 150px;
+        z-index: 100;
+    }
+}
+
+svg circle{
+    width: 100%;
+    height: 100%;
+    fill: none;
+    stroke: #1ae5f4;
+    stroke-width: 10;
+    stroke-linecap: round;
+    transform: translate(5px, 5px);
+    
+}
+svg circle{
+    stroke-dasharray:440 ;
+    stroke-dashoffset: 440;
+}
+.card:first-child svg circle:first-child{
+    stroke-dashoffset: calc(440 - (440 * 90) /100);
+    stroke: crimson;
+}
+.card:nth-child(2) svg circle:nth-child(2){
+    stroke-dashoffset: calc(440 - (440 * 85) /100);
+    stroke: rgb(19, 158, 222);
+}
+.card:nth-child(3) svg circle:nth-child(2){
+    stroke-dashoffset: calc(440 - (440 * 91) /100);
+    stroke: rgb(156, 8, 89);
+}
+.card:last-child svg circle:last-child{
+    stroke-dashoffset: calc(440 - (440 * 35) /100);
+    stroke: rgb(21, 185, 29);
+}
+
+.container_why_choose_us{
+    background:#1f2b3b;
+    text-align: center;
+    height: 480px;
+    width: 1020;
+    padding-top: 50px;
+    color: white;
+    padding-bottom: 100px;
+
+}
+

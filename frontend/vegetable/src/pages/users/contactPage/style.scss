@@ -1,0 +1,130 @@
+@use "sass:map";
+@import "style/pages/theme";
+
+.contact-page {
+    display: flex;
+    justify-content: space-between;
+  
+    .addresses,
+    .contact-forms,
+    .map {
+      flex-basis: 30%;
+      padding-left: 50px;
+      padding-right: 50px;
+      margin-top: 50px;
+ 
+    }
+  
+  }
+  
+  .address-block,
+  .contact-form-block   {
+    margin-bottom: 20px;
+
+  
+    h2 {
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+    }
+  }
+  
+  .map {
+    .gm-style {
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      height: 300px;
+    }
+  }
+.contact-form-block{
+    
+    .container_form{
+        
+        .text_title_form{
+            p{
+                margin-top: 20px;
+                margin-bottom: 15px;
+            }
+            .form_contact{
+
+                
+                input {
+                    height: 50px;
+                    width: 500px;
+                    margin-bottom: 25px;
+                    background: rgb(235, 234, 234);
+                    border: none;
+                }
+                textarea{
+                    height: 200px;
+                    width: 500px;
+                    margin-bottom: 25px;
+                    background: rgb(235, 234, 234);
+                    border: none;
+                }
+                
+                .btn {
+                    box-sizing: border-box;
+                    appearance: none;
+                    background-color: transparent;
+                    border: 2px solid map.get($theme-color, "main_color");
+                    border-radius: 0.6em;
+                    color: #e74c3c;
+                    cursor: pointer;
+                    display: flex;
+                    align-self: center;
+                    font-size: 1rem;
+                    font-weight: 400;
+                    line-height: 1;
+                    margin: 20px;
+                    padding: 1.2em 2.8em;
+                    text-decoration: none;
+                    text-align: center;
+                    text-transform: uppercase;
+                    font-weight: 700;
+                  }
+                  .btn:hover, .btn:focus {
+                    color: #fff;
+                    outline: 0;
+                  }
+                  
+                  .third {
+                    border-color: map.get($theme-color, "main_color");
+                    color: #fff;
+                    box-shadow: 0 0 40px 40px map.get($theme-color, "main_color") inset, 0 0 0 0 map.get($theme-color, "main_color");
+                    transition: all 150ms ease-in-out;
+                  }
+                  .third:hover {
+                    box-shadow: 0 0 10px 0 map.get($theme-color, "main_color") inset, 0 0 10px 4px map.get($theme-color, "main_color");
+                    color: black;
+                }
+            }
+        }
+    }
+}
+
+
+      
+        .address_container{
+            
+            display: flex;
+            align-items: center;
+            margin-top: 90px;
+
+            h5{
+                font-size: 20px;
+                font-weight: lighter;
+            }
+            
+            svg{
+                width: 50px;
+                height: 50px;
+            }
+           
+        }
+.address-block{
+    p{
+        font-weight: bold;
+        font-style: italic;
+        margin-left: 50px;
+    }
+}
